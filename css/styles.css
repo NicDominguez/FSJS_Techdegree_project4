@@ -1,6 +1,15 @@
 /* Main styles */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
 
+@font-face {
+    font-family: 'SF Distant Galaxy Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF Distant Galaxy Regular'), url('/fonts/SFDistantGalaxy.ttf');
+}
+
+
+
 /* Variables */
 
 :root {
@@ -20,7 +29,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'SF Distant Galaxy Regular', 'Montserrat', sans-serif;
 }
 
 body {
@@ -28,6 +37,7 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+  background-color: #000000;
 }
 
 li, ol, ul {
@@ -44,6 +54,8 @@ h2 {
 
 h1 {
   font-size: 30px;
+  max-width: 70%;
+  margin: 3% auto;
 }
 
 button {
@@ -86,7 +98,7 @@ button {
 /* Title */
 
 .header {
-  color: #3a3f58;
+  color: #FFE81F;
 }
 
 
@@ -176,11 +188,11 @@ button {
 }
 
 .title {
-  color: #FFF;
+  color: #FFE81F;
 }
 
 .start {
-  background-color: #3a3f58;
+  background-color: #000000;
 }
 
 .start a {
@@ -188,6 +200,8 @@ button {
 }
 
 .win {
+  background-image: url("/images/rebelBackground.png");
+  background-size: 10%;
   background-color: var(--color-win);
 }
 
@@ -196,6 +210,8 @@ button {
 }
 
 .lose {
+  background-image: url("/images/empireBackground.png");
+  background-size: 10%;
   background-color: #f5785f;
 }
 

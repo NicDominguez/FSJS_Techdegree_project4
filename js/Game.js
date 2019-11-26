@@ -60,8 +60,6 @@ class Game {
         const phrase = new Phrase(randomPhrase.phrase);
         phrase.addPhraseToDisplay();
         this.activePhrase = phrase
-        
-        console.log(phrase)
     };
 
     /**
@@ -124,21 +122,7 @@ class Game {
 
     gameOver(gameWon) {
 
-        const gameOverMessage = document.getElementById("game-over-message")
-        const resetBtn = document.getElementById('btn__reset')
-        
-        if (gameWon) {
-            gameOverMessage.innerText = "Congratulations, you won!"
-            overlay.classList.add('win')
-        } else {
-            gameOverMessage.innerText = "Sorry, you ran out of lives."
-            overlay.classList.add('lose') 
-        }
-        resetBtn.innerText = "Play again?"
-        overlay.style.display = "flex"
-
         // RESET GAME
-
         const phraseSectionUL = document.getElementById('phrase').children[0];
         const keys = document.querySelectorAll('.key')
         const hearts = document.querySelectorAll('.tries')
@@ -152,6 +136,29 @@ class Game {
         hearts.forEach((heart) => {
             heart.style.display = 'inline-block'
         })
+
+        overlay.classList.remove('win')
+        overlay.classList.remove('lose')
+
+        // Display game over message
+        const gameOverMessage = document.getElementById("game-over-message")
+        const resetBtn = document.getElementById('btn__reset')
+        
+        if (gameWon) {
+            gameOverMessage.innerText = "The force is strong with this one"
+            overlay.classList.add('win')
+        } else {
+            gameOverMessage.innerText = "Your feeble skills are no match for the power of the dark side"
+            overlay.classList.add('lose') 
+        }
+        resetBtn.innerText = "Play again?"
+        overlay.style.display = "flex"
+
+        
+
+
+
+        
 
     }
 
