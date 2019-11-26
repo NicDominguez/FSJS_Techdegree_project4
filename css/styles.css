@@ -5,7 +5,7 @@
     font-family: 'SF Distant Galaxy Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('SF Distant Galaxy Regular'), url('/fonts/SFDistantGalaxy.ttf');
+    src: url('../fonts/SFDistantGalaxy.ttf');
 }
 
 
@@ -200,7 +200,7 @@ button {
 }
 
 .win {
-  background-image: url("/images/rebelBackground.png");
+  background-image: url("../images/rebelBackground.png");
   background-size: 10%;
   background-color: var(--color-win);
 }
@@ -210,7 +210,7 @@ button {
 }
 
 .lose {
-  background-image: url("/images/empireBackground.png");
+  background-image: url("../images/empireBackground.png");
   background-size: 10%;
   background-color: #f5785f;
 }
